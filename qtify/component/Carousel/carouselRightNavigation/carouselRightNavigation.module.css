@@ -1,0 +1,13 @@
+.rightNavigation {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
