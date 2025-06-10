@@ -13,7 +13,7 @@ const Controls = ({ data }) => {
 
   useEffect(() => {
     swiper.slideTo(0);
-  }, [swiper]);
+  }, [data]);
 
   return <></>;
 };
@@ -21,8 +21,7 @@ const Controls = ({ data }) => {
 function Carousel({ data, renderComponent }) {
   return (
     <div className={styles.wrapper}>
-      <CarouselLeftNavigation />
-      <CarouselRightNavigation />
+      
       <Swiper
         style={{ padding: "0px 20px" }}
         initialSlide={0}
@@ -32,9 +31,14 @@ function Carousel({ data, renderComponent }) {
         allowTouchMove
       >
         <Controls data={data} />
-        {data.map((ele, index) => (
-          <SwiperSlide key={index}>{renderComponent(ele)}</SwiperSlide>
-        ))}
+        <div>
+           <CarouselLeftNavigation />
+           <CarouselRightNavigation />
+        </div>
+        
+        {data.map((ele) => (
+  <SwiperSlide >{renderComponent(ele)}</SwiperSlide>
+))}
       </Swiper>
     </div>
   );
