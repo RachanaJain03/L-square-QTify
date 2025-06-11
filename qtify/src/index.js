@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Homepage from "./Pages/Homepage/Homepage";
 import Albumpage from "./Pages/Albumpage/Albumpage";
+import styles from "./index.module.css"
 
 const router = createBrowserRouter([
   {
